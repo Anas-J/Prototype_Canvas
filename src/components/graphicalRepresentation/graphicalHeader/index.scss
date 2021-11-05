@@ -1,0 +1,24 @@
+@import '../../../styleGuide/typoGraphy/index.scss';
+
+.graphicalTitleHeading {
+  font-family: map-get($font-family, family-Saira);
+  font-weight: map-get($font-weight-family, boldWeight);
+  font-size: map-get($font-size-list, H5);
+  text-transform: uppercase;
+  transition: all 0.7s ease-in-out;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lighterThemeColor {
+  color: map-get($font-color-family, color1);
+}
+
+.darkerThemeColor {
+  color: map-get($font-color-family, color2);
+}

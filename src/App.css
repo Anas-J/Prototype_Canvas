@@ -1,0 +1,63 @@
+#root {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+}
+
+.loaderBackground {
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/images/BG_Dark-min.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.loaderWrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loaderContent {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+.loaderContent .loader {
+  width: 100%;
+  height: 100%;
+}
+
+.linegraph-path {
+  stroke-width: 3 !important;
+}
+
+.linegraph-circle {
+  stroke-width: 2px !important;
+}
+
+@media (max-width: 1025px) {
+  .desktopMode {
+    display: none;
+  }
+
+  .contentStyle {
+    color: #c6c6d4;
+    font-size: 24px;
+    font-family: 'Saira';
+  }
+}
+
+@media (min-width: 1025px) {
+  .mobileMode {
+    display: none;
+  }
+}

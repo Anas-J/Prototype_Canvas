@@ -1,0 +1,115 @@
+@import '../../styleGuide/typoGraphy/index.scss';
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+  height: 100%;
+
+  tr:nth-child(even) {
+    background-color: #f2f5f9;
+  }
+  tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  tr {
+    color: #4f5085;
+    font-family: 'Saira Medium';
+    animation: fadeIn 0.5s linear;
+    animation-fill-mode: both;
+    text-transform: uppercase;
+    td,
+    th {
+      text-align: center;
+      padding: 0.5rem;
+    }
+  }
+  tr td:nth-child(1) {
+    text-align: left;
+    padding-left: 2rem;
+  }
+  tr:nth-child(1) {
+    font-weight: 600;
+    td:nth-child(1) {
+      border-top-left-radius: 5px;
+    }
+    td:last-child {
+      border-top-right-radius: 5px;
+    }
+
+    td {
+      color: #fff;
+    }
+  }
+  tr:last-child {
+    td:nth-child(1) {
+      border-bottom-left-radius: 5px;
+    }
+    td:last-child {
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
+
+.tableWithSum {
+  tr:last-child {
+    font-weight: 600;
+    background-color: #c8d2e7;
+  }
+  tr:nth-child(even) {
+    td:last-child,
+    th:last-child {
+      background-color: #c8d2e7;
+    }
+  }
+  tr:nth-child(odd) {
+    td:last-child,
+    th:last-child {
+      background-color: #dee4f0;
+    }
+  }
+  tr:first-child {
+    td:last-child,
+    th:last-child {
+      background-color: #1e254a;
+    }
+  }
+}
+
+.tableBodyL2 table tr td:nth-child(2) {
+  width: 12em;
+}
+
+.tableBodyL2 table tr td:nth-child(3) {
+  text-align: left;
+}
+
+table tr {
+  animation: fadeIn 0.3s linear;
+  animation-fill-mode: both;
+}
+table tr:first-child {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+@for $i from 1 through 19 {
+  tr:nth-child(#{$i}) {
+    animation-delay: $i * 0.1s;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  75% {
+    opacity: 0.5;
+    top: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
+}

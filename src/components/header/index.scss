@@ -1,0 +1,152 @@
+.headerWrap {
+  align-items: center;
+  display: flex;
+  font-family: 'Saira';
+  // position: sticky;
+  top: 0;
+  z-index: 2;
+  height: 3rem;
+  box-sizing: border-box;
+  padding: 0 3rem 0 2.3rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .reportModalControls {
+    display: flex;
+    align-items: center;
+    width: 38vw;
+    max-width: 40vw;
+    cursor: pointer;
+
+    .activeReport {
+      font-size: 18px;
+      border-radius: 2em;
+      font-weight: 800;
+      font-family: 'Saira Medium';
+      transition: all 0.5s ease-in-out;
+      z-index: 99;
+    }
+
+    .hamburgerIcon {
+      transform: scale(1.5);
+      z-index: 99;
+      position: relative;
+      width: 50px;
+      height: 4px;
+      cursor: pointer;
+
+      .iconCheckbox {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+        z-index: 2;
+        -webkit-touch-callout: none;
+        position: absolute;
+        opacity: 0;
+        margin: 0 !important;
+        padding: 3px !important;
+      }
+    }
+    .hamburgerIcon div {
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 22px;
+      height: 12px;
+    }
+    .hamburgerIcon span {
+      position: absolute;
+      display: block;
+      width: 66%;
+      height: 1px;
+      border-radius: 1px;
+      transition: all 0.5s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+    }
+    .hamburgerIcon span:first-of-type {
+      top: 3px;
+    }
+    .hamburgerIcon span:last-of-type {
+      bottom: 4px;
+    }
+  }
+  .reportModalControls:hover {
+    .activeReport {
+      color: #ea3537;
+    }
+    .hamburgerIcon span {
+      background-color: #ea3537;
+    }
+  }
+
+  .rightHeader {
+    display: flex;
+    width: 26em;
+    align-items: center;
+    justify-content: space-between;
+
+    .themeVector:hover {
+      filter: invert(34%) sepia(73%) saturate(4390%) hue-rotate(340deg) brightness(93%) contrast(96%);
+    }
+
+    .themeBtn {
+      border: none;
+      background: transparent;
+      padding: 0;
+      width: 2em;
+      height: 2em;
+      cursor: pointer;
+    }
+
+    .profileWrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 8em;
+
+      .profileHeader {
+        line-height: 1.1rem;
+      }
+
+      .salutation {
+        text-align: right;
+      }
+
+      span {
+        font-size: 14px;
+      }
+
+      .profilePic {
+        width: 2em;
+        height: 2em;
+      }
+
+      .boldText {
+        font-weight: 600;
+      }
+
+      .reportUpdate {
+        font-size: 10px;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.hamburgerIcon.active span:first-of-type,
+.hamburgerIcon .iconCheckbox:checked + div span:first-of-type {
+  transform: rotate(45deg);
+  top: 5px;
+  bottom: 5px;
+}
+.hamburgerIcon.active span:last-of-type,
+.hamburgerIcon .iconCheckbox:checked + div span:last-of-type {
+  transform: rotate(-45deg);
+  bottom: 5px;
+  top: 5px;
+}

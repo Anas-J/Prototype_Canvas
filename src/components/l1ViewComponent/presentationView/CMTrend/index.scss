@@ -1,0 +1,41 @@
+@import '../../../../styleGuide/typoGraphy/index.scss';
+
+.trendWrapper {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.L1Wrapper {
+  position: relative;
+}
+
+.textValueGradient {
+  background: linear-gradient(90deg, #f0fff4 0%, #c6ffec 100%);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+.textPosition {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  img {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}
+
+.text {
+  font-family: map-get($font-family, family-Saira);
+  font-weight: map-get($font-weight-family, boldWeight);
+  font-size: map-get($font-size-list, H4);
+  color: map-get($font-color-family, color1);
+  margin-right: 0.1rem;
+}

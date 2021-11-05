@@ -1,0 +1,331 @@
+.navContainer {
+  position: absolute;
+  height: 100%;
+  width: 25%;
+  box-sizing: border-box;
+  background: #ffffff;
+  animation: fadeIn 0.5s ease-in-out;
+  left: 0;
+
+  .reportWrapper:hover {
+    .reportData {
+      color: #ea3537;
+      transform: translateX(10px);
+    }
+    .reportData.active {
+      color: #383874;
+      transform: translateX(0px);
+    }
+  }
+
+  .navContentsWrapper {
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+
+    .contentBtn {
+      position: absolute;
+      bottom: 1rem;
+      left: 2rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      box-sizing: border-box;
+      z-index: 5;
+      cursor: pointer;
+
+      .btnHolder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .playBtn {
+          transform: rotate(180deg);
+          width: 1rem;
+          height: 1rem;
+          margin-left: 0.3rem;
+        }
+
+        .pauseBtn {
+          width: 0.6rem;
+          height: 1rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          span {
+            width: 0.2rem;
+            height: 100%;
+            background: #45518c;
+          }
+        }
+      }
+    }
+
+    .navTimeline {
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      left: 3.5rem;
+    }
+
+    .reportContent {
+      font-family: 'Saira';
+      font-size: 0.8rem;
+      padding-left: 3.5rem;
+      cursor: pointer;
+
+      .activeTopLayer {
+        position: absolute;
+        width: 100%;
+        height: 3.75rem;
+        left: 0em;
+        top: 0rem;
+        z-index: 1;
+        transition: 0.3s ease-in;
+        pointer-events: none;
+      }
+
+      .reportWrapper {
+        display: flex;
+        align-items: center;
+        height: 3.75rem;
+        position: relative;
+
+        .nodeLine {
+          position: absolute;
+          width: 1px;
+          height: 100%;
+          z-index: 1;
+        }
+
+        .nodeCircle {
+          position: absolute;
+          width: 0.8em;
+          height: 0.8em;
+          object-fit: none;
+          left: -0.35em;
+          z-index: 2;
+          transition: 0.3s ease-in-out;
+        }
+
+        .enlarge {
+          width: 1.3em;
+          height: 1.3em;
+          object-fit: contain;
+          left: -0.6em;
+          z-index: 5;
+        }
+
+        span {
+          font-weight: 500;
+          padding-left: 2rem;
+        }
+
+        .reportData {
+          transition: 0.5s ease-in-out;
+        }
+
+        .reportData.active {
+          font-weight: 600;
+          z-index: 1;
+        }
+      }
+    }
+
+    .addReport {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      height: 5em;
+      font-family: 'Saira';
+      font-size: 16px;
+      font-weight: 600;
+
+      .addContent {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .addData {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          left: 2.8rem;
+          top: 2em;
+
+          .addIcon {
+            width: 1.5em;
+            height: 1.5em;
+            margin-right: 1em;
+          }
+
+          .dark-addIcon {
+            filter: invert(31%) sepia(95%) saturate(2813%) hue-rotate(340deg) brightness(111%) contrast(114%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-dark-theme .reportWrapper:hover {
+  .reportData {
+    color: #ea3537;
+  }
+  .reportData.active {
+    color: #ffffff;
+  }
+}
+
+.showNavContainer {
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.hideNavContainer {
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.navContainer.nav-dark-theme .navContentsWrapper .reportContent .activeTopLayer {
+  background-image: linear-gradient(45deg, #435088, #435088);
+}
+
+.reportContent .lightGradient-1 {
+  background-image: linear-gradient(
+    to right,
+    #d0c0b7,
+    #d2c4ba,
+    #d3c7bd,
+    #d5cbc1,
+    #d7cec4,
+    #d8d0c6,
+    #d9d2c9,
+    #dad4cb,
+    #dbd5cc,
+    #dbd7ce,
+    #dcd8cf,
+    #ddd9d1
+  );
+}
+
+.reportContent .lightGradient-2 {
+  background-image: linear-gradient(
+    to right,
+    #cfb3aa,
+    #d1b7ad,
+    #d3bbb0,
+    #d5bfb4,
+    #d7c3b7,
+    #d9c5b9,
+    #dac8bc,
+    #dccabe,
+    #deccc0,
+    #dfcdc2,
+    #e1cfc4,
+    #e2d1c6
+  );
+}
+
+.reportContent .lightGradient-3 {
+  background-image: linear-gradient(
+    to right,
+    #cda59c,
+    #d0a89e,
+    #d2aba0,
+    #d5afa3,
+    #d7b2a5,
+    #d9b5a8,
+    #dab9aa,
+    #dcbcad,
+    #dec0b1,
+    #e0c5b5,
+    #e2c9ba,
+    #e4cdbe
+  );
+}
+
+.reportContent .lightGradient-4 {
+  background-image: linear-gradient(
+    to right,
+    #cc938a,
+    #d0998e,
+    #d49f93,
+    #d7a698,
+    #dbac9d,
+    #ddb1a1,
+    #e0b5a5,
+    #e2baa9,
+    #e4bead,
+    #e5c2b1,
+    #e7c6b5,
+    #e9cab9
+  );
+}
+
+.reportContent .lightGradient-5 {
+  background-image: linear-gradient(
+    to right,
+    #cc8780,
+    #d08d84,
+    #d39389,
+    #d7998d,
+    #da9f92,
+    #dda496,
+    #dfaa9a,
+    #e2af9e,
+    #e5b5a3,
+    #e7bba7,
+    #eac1ad,
+    #ecc7b2
+  );
+}
+
+.reportContent .lightGradient-6 {
+  background-image: linear-gradient(
+    to right,
+    #cb7c78,
+    #d0847d,
+    #d48b82,
+    #d99388,
+    #dd9b8e,
+    #e0a192,
+    #e3a896,
+    #e6ae9b,
+    #e8b49f,
+    #eab9a4,
+    #ecbfa9,
+    #eec4ae
+  );
+}
+
+.reportContent .lightGradient-7 {
+  background-image: linear-gradient(
+    to right,
+    #cb7c78,
+    #d0847d,
+    #d48b82,
+    #d99388,
+    #dd9b8e,
+    #e0a192,
+    #e3a896,
+    #e6ae9b,
+    #e8b49f,
+    #eab9a4,
+    #ecbfa9,
+    #eec4ae
+  );
+}
+
+.navContentsWrapper::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,335 @@
+@import '../../styleGuide/typoGraphy/index.scss';
+
+.cardWrapperL2 {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.headerText {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+
+
+.tableWrapperL2 {
+  width: 100%;
+  height: 100%;
+
+  .tableBodyL2 {
+    height: calc(100% - 6rem);
+    overflow: auto;
+    border-radius: 6px;
+    margin-top: 1em;
+  }
+}
+
+.darkGraphTableWrapper,
+.darkHead {
+  .headerDesc {
+    color: #c6c6d4;
+  }
+}
+
+.lightGraphTableWrapper,
+.lightHead {
+  .headerDesc {
+    color: #373773;
+  }
+}
+
+.headerDesc {
+  font-size: 0.8rem;
+  text-align: center;
+  width: 100vh;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  @supports (-webkit-line-clamp: 2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.tabWrapper {
+  width: 100%;
+  height: 2rem;
+}
+
+.tableBodyL2::-webkit-scrollbar,
+.cardViewContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.cardViewContainer {
+  .inlineStart {
+    width: 45%;
+  }
+  .inlineEnd {
+    width: 45.5%;
+  }
+}
+
+.tableForGraphL2 {
+  width: 100%;
+  height: calc(100% - 6rem);
+  border-radius: 6px;
+  overflow: auto;
+  margin-top: 1em;
+}
+
+.tableForGraphL2::-webkit-scrollbar {
+  display: none;
+}
+
+.graphTableWrapper {
+  width: 100%;
+  height: 100%;
+
+  .graphWrapperL2 {
+    width: 100%;
+    height: calc(100% - 6rem);
+    margin-top: 1em;
+  }
+  .graphWrapperL2.adjustHeight {
+    height: calc(100% - 8rem);
+  }
+  .graphicalLegends {
+    height: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .legendMarker {
+      display: flex;
+      align-items: center;
+      margin-right: 1em;
+    }
+
+    .legendValue {
+      font-size: 10px;
+    }
+    .legendColor {
+      width: 0.5em;
+      height: 0.5em;
+      border-radius: 50%;
+      margin-right: 0.5em;
+    }
+    .areaLegends {
+      border-radius: 1%;
+      width: 0.8rem;
+      height: 0.2em;
+    }
+  }
+  .graphTableHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 4rem;
+
+    .graphTableToggle {
+      display: flex;
+      position: absolute;
+      right: 0;
+      align-items: baseline;
+      justify-content: space-between;
+      width: 4.5em;
+      height: 100%;
+
+      .tabs {
+        width: 25px;
+        height: 25px;
+        box-sizing: border-box;
+        padding: 2px;
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        opacity: 0.6;
+      }
+      .activeTab {
+        border-bottom: 3px solid #383874;
+        opacity: 1;
+      }
+      .tabs.graphTab {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+      }
+
+      .tabs:hover {
+        opacity: 1;
+      }
+      .marginRight {
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+.darkGraphTableWrapper .graphTableHeader .graphTableToggle .activeTab {
+  border-bottom: 3px solid #ffffff;
+}
+
+.darkGraphTableWrapper .axis .tick > text,
+.detailContainer.dark .axis .tick > text {
+  fill: #c6c6d4;
+}
+
+.lightGraphTableWrapper .axis .tick > text,
+.detailContainer.light .axis .tick > text {
+  fill: #383874;
+}
+
+.darkGraphTableWrapper .tick line,
+.detailContainer.dark .tick line {
+  stroke: #c6c6d4;
+  stroke-dasharray: 0 !important;
+}
+
+.lightGraphTableWrapper .tick line,
+.detailContainer.light .tick line {
+  stroke: #383874;
+  stroke-dasharray: 0 !important;
+}
+
+.darkGraphTableWrapper text {
+  fill: #c6c6d4;
+}
+
+.darkGraphTableWrapper .cm-lollipop text,
+.detailContainer.dark .cm-lollipop text {
+  fill: #ffffff;
+}
+
+.lightGraphTableWrapper .cm-lollipop text,
+.detailContainer.light .cm-lollipop text {
+  fill: #383874;
+}
+
+.mrgraph-bar-value {
+  font-family: inherit;
+  opacity: 0.6;
+}
+
+// .cm-line .x .tick:last-of-type > text,
+// .detailContainer.dark .cm-line .x .tick:last-of-type > text {
+//   font-size: 9px !important;
+// }
+
+.cm-multiple-columns .value-group .mrgraph-multiple-bar-value {
+  font-size: 12px;
+}
+
+.lightGraphTableWrapper {
+  .mrgraph-bar-value {
+    fill: #383874;
+    font-size: 12px;
+    font-weight: 800;
+  }
+  .cm-multiple-columns .value-group .mrgraph-multiple-bar-value {
+    fill: #383874;
+    font-weight: 800;
+  }
+  .mrgraph-value-group-column {
+    fill: #383874;
+  }
+  .all {
+    color: #383874;
+  }
+}
+
+.darkGraphTableWrapper {
+  .mrgraph-bar-value {
+    fill: #c6c6d4;
+    font-size: 12px;
+    font-weight: 800;
+  }
+  .cm-multiple-columns .value-group .mrgraph-multiple-bar-value {
+    fill: #c6c6d4;
+    font-weight: 800;
+  }
+  .mrgraph-value-group-column {
+    fill: #c6c6d4;
+  }
+  .all {
+    color: #c6c6d4;
+  }
+}
+
+.mrgraph-value-group-column {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.mrgraph-bar,
+.mrgraph-multiple-bar,
+rect {
+  cursor: default !important;
+}
+
+.darkGraphTableWrapper .tableForGraphL2 table tr:first-child {
+  background-color: map-get($header-background-color, backgroundColorDark);
+}
+
+.darkTableWrap table tr:first-child {
+  background-color: map-get($header-background-color, backgroundColorDark);
+}
+
+.lightTableWrap table tr:first-child {
+  background-color: map-get($header-background-color, backgroundColorLight);
+}
+
+.lightGraphTableWrapper .tableForGraphL2 table tr:first-child {
+  background-color: map-get($header-background-color, backgroundColorLight);
+  td:last-child {
+    background-color: map-get($header-background-color, backgroundColorLight);
+  }
+}
+
+.graphWrapperL2 .all {
+  top: -1% !important;
+  font-family: 'Saira';
+  font-size: 12px;
+  margin: 0;
+}
+
+.node.level-1 .label {
+  left: 0% !important;
+  top: 0% !important;
+  transform: translateX(5%) translateY(29%) !important;
+  font-family: 'Saira';
+  line-height: 1rem;
+}
+
+.node .title1 {
+  font-weight: 800 !important;
+}
+
+.node.level-1 .title2 {
+  text-align: left !important;
+}
+
+.node.level-1 {
+  font-family: 'Saira';
+}
+
+.node .title1 {
+  margin-left: 0.8em;
+  margin-top: 0.3em;
+}
+
+.node .title2 {
+  margin-left: 0.8em;
+}

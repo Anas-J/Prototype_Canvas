@@ -1,0 +1,11 @@
+@import '../../../styleGuide/typoGraphy/index.scss';
+
+.cardsTextViewHeader {
+  font-family: map-get($font-family, family-Saira);
+  font-size: map-get($font-size-list, H5);
+  font-weight: map-get($font-weight-family, boldWeight);
+  color: map-get($font-color-family, color1);
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  text-align: center;
+}

@@ -1,0 +1,68 @@
+.graphicalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graphicalView {
+  width: 100%;
+  height: 100%;
+}
+
+.domain{
+  display:none;
+}
+
+.detailed-overall-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.margin-right-tooltip-container {
+  margin-right: 0.5rem;
+  font-family: 'Saira';
+  font-size: 14px;
+}
+
+.detailed-label-text {
+  font-family: 'Saira';
+  font-weight: 600;
+}
+
+.multiseries-value,
+.detailed-value {
+  font-family: 'Saira Medium';
+  font-size: 16px;
+}
+
+.mr-tooltip .anim {
+  border-radius: 0.3em !important;
+}
+
+.mr-tooltip.piktorsense-default-tooltip .content {
+  padding: 0;
+}
+
+.detailed-multiseries-value {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.stack-group .value-group-stacked {
+  display: none !important;
+}
+
+.stack-group .value-group-stacked:last-child {
+  display: block !important;
+}
+
+.detailed-multiseries-data {
+  line-height: 1.3rem;
+}
+
+.multiseries-value,
+.margin-right-tooltip-container {
+  font-size: 12px;
+}

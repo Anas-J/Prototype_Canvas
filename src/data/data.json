@@ -1,0 +1,1522 @@
+{
+  "reports": [
+    {
+      "name": "Executive Summary",
+      "id": 1,
+      "leftNavName": "Executive Summary",
+      "cardsView": [
+        {
+          "L1View": "CMIcon",
+          "L1Text": "1",
+          "L1Footer": "P1 Incident",
+          "L2View": "CMColumn",
+          "DataType": "Series",
+          "parentId": 1,
+          "tagName": "Incidents",
+          "tagDescription": "This report is for the last 7 days [ from 5/8 to 5/14].  The majority of the reported issues are due to application configuration issues",
+          "parentName": "Executive Summary",
+          "L2Name": "Executive Summary",
+          "id": 1,
+          "dataFormat": {
+            "data": [
+              {
+                "header1": "Severity",
+                "header2": "Count",
+                "value1": "P0",
+                "value2": "0"
+              },
+              {
+                "header1": "Severity",
+                "header2": "Count",
+                "value1": "P1",
+                "value2": "1"
+              },
+              {
+                "header1": "Severity",
+                "header2": "Count",
+                "value1": "P2",
+                "value2": "31"
+              },
+              {
+                "header1": "Severity",
+                "header2": "Count",
+                "value1": "P3",
+                "value2": "38"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Impacted Environments",
+      "id": 2,
+      "leftNavName": "Impacted Environments",
+      "cardsView": [
+        {
+          "L1View": "CMIcon",
+          "L1Text": "70",
+          "L1Footer": "Total Issues",
+          "L2View": "CMColumnStacked",
+          "DataType": "MultiSeries",
+          "parentId": 2,
+          "tagName": "Env Issues",
+          "tagDescription": "A significant portion of incidents are P2 and P3. Blocking portion of test cases.",
+          "parentName": "Impacted Environments",
+          "L2Name": "Impacted Environments",
+          "id": 2,
+          "dataFormat": {
+            "data": [
+              {
+                "header1": "Impacted Environments",
+                "header2": "p0",
+                "header3": "p1",
+                "header4": "p2",
+                "header5": "p3",
+                "value1": "QLAB02",
+                "value2": "0",
+                "value3": "0",
+                "value4": "14",
+                "value5": "19"
+              },
+              {
+                "header1": "Impacted Environments",
+                "header2": "p0",
+                "header3": "p1",
+                "header4": "p2",
+                "header5": "p3",
+                "value1": "QLAB03",
+                "value2": "0",
+                "value3": "1",
+                "value4": "15",
+                "value5": "12"
+              },
+              {
+                "header1": "Impacted Environments",
+                "header2": "p0",
+                "header3": "p1",
+                "header4": "p2",
+                "header5": "p3",
+                "value1": "PLAB01",
+                "value2": "0",
+                "value3": "0",
+                "value4": "1",
+                "value5": "4"
+              },
+              {
+                "header1": "Impacted Environments",
+                "header2": "p0",
+                "header3": "p1",
+                "header4": "p2",
+                "header5": "p3",
+                "value1": "QLAB07",
+                "value2": "0",
+                "value3": "0",
+                "value4": "1",
+                "value5": "3"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Critical Issue(s)",
+      "id": 3,
+      "leftNavName": "Critical Issue(s)",
+      "cardsView": [
+        {
+          "L1View": "CMText",
+          "L1Text": "1",
+          "L1Footer": "Issue",
+          "L2View": "",
+          "DataType": "",
+          "parentId": 3,
+          "tagName": "P1 Issue",
+          "tagDescription": "TMAG Activation | TMAG to TPOS toggle is not working",
+          "parentName": "Critical Issue(s)",
+          "L2Name": "P1 Issue",
+          "id": 3,
+          "dataFormat": {
+            "data": [
+              {
+                "header1": "Issue No.",
+                "header2": "Duration",
+                "header3": "Root Cause",
+                "header4": "Resolution",
+                "header5": "Impact",
+                "header6": "Incident Owner",
+                "value1": "P1 - INC-9257",
+                "value2": "8 Hours",
+                "value3": "Application was using old image repo that was shut down several months ago.",
+                "value4": "Empty Repos created for TMAG and TPOS teams. SCCS Platform team worked on generating needed configs to restore the apps.\n SCCS platform team identified other applications in NPE having similar issues. They are remediating all apps that have orphaned SCCS servers.",
+                "value5": "QLAB03",
+                "value6": "Sujit Vasudev"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Unplanned Outages",
+      "id": 4,
+      "leftNavName": "Unplanned Outages",
+      "cardsView": [
+        {
+          "L1View": "CMIcon",
+          "L1Text": "1",
+          "L1Footer": "Outage",
+          "L2View": "",
+          "DataType": "",
+          "parentId": 4,
+          "tagName": "Unplanned Outage",
+          "tagDescription": "ITE2 NOR Replication Issue due to Missing table",
+          "parentName": "Unplanned Outages",
+          "L2Name": "Unplanned Outage",
+          "id": 4,
+          "multi": true,
+          "dataFormat": {
+            "data": [
+              {
+                "header1": "Ticket No.",
+                "header2": "Approver Name",
+                "header3": "Notification Reason",
+                "header4": "Env Impacted",
+                "header5": "Release Impacted",
+                "value1": "1467",
+                "value2": "Application Down - No approval is required",
+                "value3": "ITE2 NOR Replication Issue due to Missing table (heartbeat table) - This is Impacting Conversion Testing - Other testing isn't impacted",
+                "value4": "ITE2",
+                "value5": "IRP21.05 ITE2"
+              },
+              {
+                "header1": "Appl Impacted",
+                "header2": "Start",
+                "header3": "End",
+                "header4": "Actual Duration",
+                "value1": "8NS - NOR - Nextel Online Repository",
+                "value2": "5/13/21, 13:00",
+                "value3": "5/13/21, 17:30",
+                "value4": "03hr 45min"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "INC Responsible Teams",
+      "id": 5,
+      "leftNavName": "INC Responsible Teams",
+      "cardsView": [
+        {
+          "L1View": "CMIcon",
+          "L1Text": "32",
+          "L1Footer": "Distinct Teams",
+          "L2View": "CMColumn",
+          "DataType": "Series",
+          "parentId": 5,
+          "tagName": "INC Responsible Teams",
+          "tagDescription": "Shows a Team that fixed the issue. A total of 70 issues fixed",
+          "parentName": "INC Responsible Teams",
+          "L2Name": "INC Responsible Teams",
+          "childName": "Encountered Issues",
+          "id": 5,
+          "dataFormat": {
+            "data": [
+              {
+                "header1": "INC Responsible Teams",
+                "header2": "Count",
+                "value1": "Testing Team",
+                "value2": "8"
+              },
+              {
+                "header1": "INC Responsible Teams",
+                "header2": "Count",
+                "value1": "Not Listed",
+                "value2": "7"
+              },
+              {
+                "header1": "INC Responsible Teams",
+                "header2": "Count",
+                "value1": "TFB",
+                "value2": "6"
+              },
+              {
+                "header1": "INC Responsible Teams",
+                "header2": "Count",
+                "value1": "xECM Defect Triage",
+                "value2": "6"
+              },
+              {
+                "header1": "INC Responsible Teams",
+                "header2": "Count",
+                "value1": "None",
+                "value2": "4"
+              },
+              {
+                "header1": "INC Responsible Teams",
+                "header2": "Count",
+                "value1": "DPO",
+                "value2": "3"
+              },
+              {
+                "header1": "INC Responsible Teams",
+                "header2": "Count",
+                "value1": "DPS Dev",
+                "value2": "3"
+              },
+              {
+                "header1": "INC Responsible Teams",
+                "header2": "Count",
+                "value1": "DSG DAMS",
+                "value2": "2"
+              },
+              {
+                "header1": "INC Responsible Teams",
+                "header2": "Count",
+                "value1": "DSG FAMS",
+                "value2": "2"
+              },
+              {
+                "header1": "INC Responsible Teams",
+                "header2": "Count",
+                "value1": "Ericsson Dev",
+                "value2": "2"
+              },
+              {
+                "header1": "INC Responsible Teams",
+                "header2": "Count",
+                "value1": "Others",
+                "value2": "27"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Category of Application Issues",
+      "id": 6,
+      "leftNavName": "Category of Application Issues",
+      "cardsView": [
+        {
+          "L1View": "CMIcon",
+          "L1Text": "70",
+          "L1Footer": "Issues",
+          "L2View": "CMColumn",
+          "DataType": "Series",
+          "parentId": 6,
+          "tagName": "Application Issues",
+          "tagDescription": "Significant issues are due to application configuration issues",
+          "parentName": "Category of Application Issues",
+          "L2Name": "Application Issues",
+          "childName": "Resolved Status",
+          "id": 6,
+          "dataFormat": {
+            "data": [
+              {
+                "header1": "Application Issues",
+                "header2": "Count",
+                "value1": "App-Config",
+                "value2": "23"
+              },
+              {
+                "header1": "Application Issues",
+                "header2": "Count",
+                "value1": "App",
+                "value2": "10"
+              },
+              {
+                "header1": "Application Issues",
+                "header2": "Count",
+                "value1": "App-Code",
+                "value2": "8"
+              },
+              {
+                "header1": "Application Issues",
+                "header2": "Count",
+                "value1": "App-Restart Service",
+                "value2": "6"
+              },
+              {
+                "header1": "Application Issues",
+                "header2": "Count",
+                "value1": "None",
+                "value2": "5"
+              },
+              {
+                "header1": "Application Issues",
+                "header2": "Count",
+                "value1": "App-DB",
+                "value2": "4"
+              },
+              {
+                "header1": "Application Issues",
+                "header2": "Count",
+                "value1": "People",
+                "value2": "4"
+              },
+              {
+                "header1": "Application Issues",
+                "header2": "Count",
+                "value1": "Test Data",
+                "value2": "4"
+              },
+              {
+                "header1": "Application Issues",
+                "header2": "Count",
+                "value1": "Process",
+                "value2": "3"
+              },
+              {
+                "header1": "Application Issues",
+                "header2": "Count",
+                "value1": "App-Platform",
+                "value2": "2"
+              },
+              {
+                "header1": "Application Issues",
+                "header2": "Count",
+                "value1": "App-Env Setup",
+                "value2": "1"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Deployments outside change window",
+      "id": 7,
+      "leftNavName": "Deployments outside the change window",
+      "cardsView": [
+        {
+          "L1View": "CMIcon",
+          "L1Text": "1019",
+          "L1Footer": "for this period",
+          "L2View": "CMMultipleColumns",
+          "DataType": "MultiSeries",
+          "parentId": 7,
+          "tagName": "RFC Count",
+          "tagDescription": "There are still deployments happening outside of the change window. However, it is trending down",
+          "parentName": "Deployments outside change window",
+          "L2Name": "Deployments outside change window",
+          "childName": "RFC Count",
+          "id": 7,
+          "dataFormat": {
+            "data": [
+              {
+                "header1": "Impacted Environments",
+                "header2": "Outside",
+                "header3": "Inside",
+                "value1": "PLAB01",
+                "value2": "12",
+                "value3": "30"
+              },
+              {
+                "header1": "Impacted Environments",
+                "header2": "Outside",
+                "header3": "Inside",
+                "value1": "QLAB01",
+                "value2": "43",
+                "value3": "7"
+              },
+              {
+                "header1": "Impacted Environments",
+                "header2": "Outside",
+                "header3": "Inside",
+                "value1": "QLAB02",
+                "value2": "130",
+                "value3": "38"
+              },
+              {
+                "header1": "Impacted Environments",
+                "header2": "Outside",
+                "header3": "Inside",
+                "value1": "QLAB03",
+                "value2": "67",
+                "value3": "43"
+              },
+              {
+                "header1": "Impacted Environments",
+                "header2": "Outside",
+                "header3": "Inside",
+                "value1": "QLAB06",
+                "value2": "43",
+                "value3": "5"
+              },
+              {
+                "header1": "Impacted Environments",
+                "header2": "Outside",
+                "header3": "Inside",
+                "value1": "QLAB07",
+                "value2": "33",
+                "value3": "4"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "RFC Trend",
+      "id": 8,
+      "leftNavName": "RFC Trend",
+      "cardsView": [
+        {
+          "L1View": "CMTrend",
+          "L1Text": "-35",
+          "L1Footer": "from previous period",
+          "L2View": "CMLineStacked",
+          "DataType": "MultiSeries",
+          "parentId": 8,
+          "tagName": "RFC Trend",
+          "tagDescription": "There are still deployments happening outside of the change window. However, it is trending down",
+          "parentName": "RFC Trend",
+          "L2Name": "RFC Trend",
+          "childName": "RFC Trend",
+          "id": 8,
+          "dataFormat": {
+            "data": [
+              {
+                "header1": "Env",
+                "header2": "May 15",
+                "header3": "May 22",
+                "header4": "May 29",
+                "header5": "Jun 5",
+                "header6": "Jun 12",
+                "value1": "PLAB01",
+                "value2": "25",
+                "value3": "10",
+                "value4": "7",
+                "value5": "7",
+                "value6": "3"
+              },
+              {
+                "header1": "Env",
+                "header2": "May 15",
+                "header3": "May 22",
+                "header4": "May 29",
+                "header5": "Jun 5",
+                "header6": "Jun 12",
+                "value1": "QLAB01",
+                "value2": "40",
+                "value3": "34",
+                "value4": "39",
+                "value5": "33",
+                "value6": "55"
+              },
+              {
+                "header1": "Env",
+                "header2": "May 15",
+                "header3": "May 22",
+                "header4": "May 29",
+                "header5": "Jun 5",
+                "header6": "Jun 12",
+                "value1": "QLAB02",
+                "value2": "138",
+                "value3": "108",
+                "value4": "120",
+                "value5": "105",
+                "value6": "75"
+              },
+              {
+                "header1": "Env",
+                "header2": "May 15",
+                "header3": "May 22",
+                "header4": "May 29",
+                "header5": "Jun 5",
+                "header6": "Jun 12",
+                "value1": "QLAB03",
+                "value2": "45",
+                "value3": "34",
+                "value4": "55",
+                "value5": "65",
+                "value6": "45"
+              },
+              {
+                "header1": "Env",
+                "header2": "May 15",
+                "header3": "May 22",
+                "header4": "May 29",
+                "header5": "Jun 5",
+                "header6": "Jun 12",
+                "value1": "QLAB06",
+                "value2": "33",
+                "value3": "11",
+                "value4": "39",
+                "value5": "25",
+                "value6": "25"
+              },
+              {
+                "header1": "Env",
+                "header2": "May 15",
+                "header3": "May 22",
+                "header4": "May 29",
+                "header5": "Jun 5",
+                "header6": "Jun 12",
+                "header7": "QLAB07",
+                "value1": "QLAB07",
+                "value2": "28",
+                "value3": "28",
+                "value4": "24",
+                "value5": "12",
+                "value6": "33"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "RFC Count by VPs",
+      "id": 9,
+      "leftNavName": "RFC Count by VPs",
+      "cardsView": [
+        {
+          "L1View": "CMIcon",
+          "L1Text": "1019",
+          "L1Footer": "for this period",
+          "L2View": "CMLollipop",
+          "DataType": "Series",
+          "parentId": 9,
+          "tagName": "RFC Count by VPs",
+          "tagDescription": "There are still deployments happening outside of the change window. However, it is trending down",
+          "parentName": "RFC Count by VPs",
+          "L2Name": "RFC Count by VPs",
+          "childName": "RFC Count by VPs",
+          "id": 9,
+          "dataFormat": {
+            "data": [
+              {
+                "header1": "VP",
+                "header2": "Total RFC Count",
+                "value1": "Darron Webb",
+                "value2": "239"
+              },
+              {
+                "header1": "VP",
+                "header2": "Total RFC Count",
+                "value1": "Mathew (Newport) Davis",
+                "value2": "193"
+              },
+              {
+                "header1": "VP",
+                "header2": "Total RFC Count",
+                "value1": "Meg J Kanuth",
+                "value2": "126"
+              },
+              {
+                "header1": "VP",
+                "header2": "Total RFC Count",
+                "value1": "Enrico Bignotti",
+                "value2": "120"
+              },
+              {
+                "header1": "VP",
+                "header2": "Total RFC Count",
+                "value1": "Christopher Hall",
+                "value2": "114"
+              },
+              {
+                "header1": "VP",
+                "header2": "Total RFC Count",
+                "value1": "Brian Forcum",
+                "value2": "77"
+              },
+              {
+                "header1": "VP",
+                "header2": "Total RFC Count",
+                "value1": "Craig Thomas",
+                "value2": "47"
+              },
+              {
+                "header1": "VP",
+                "header2": "Total RFC Count",
+                "value1": "James Curl",
+                "value2": "44"
+              },
+              {
+                "header1": "VP",
+                "header2": "Total RFC Count",
+                "value1": "Rebellion Assisted",
+                "value2": "37"
+              },
+              {
+                "header1": "VP",
+                "header2": "Total RFC Count",
+                "value1": "T-Mobile Partner API Service",
+                "value2": "10"
+              },
+              {
+                "header1": "VP",
+                "header2": "Total RFC Count",
+                "value1": "EDS Common Library",
+                "value2": "6"
+              },
+              {
+                "header1": "VP",
+                "header2": "Total RFC Count",
+                "value1": "Ryan P Sullivan",
+                "value2": "4"
+              },
+              {
+                "header1": "VP",
+                "header2": "Total RFC Count",
+                "value1": "Shyam Prakash",
+                "value2": "2"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "RFC Count by Apps",
+      "id": 10,
+      "leftNavName": "RFC Count by Apps",
+      "cardsView": [
+        {
+          "L1View": "CMIcon",
+          "L1Text": "1019",
+          "L1Footer": "for this period",
+          "L2View": "",
+          "DataType": "Table",
+          "parentId": 10,
+          "tagName": "RFC Count by Apps",
+          "tagDescription": "Based on the data, the following teams are deploying outside of change windows",
+          "parentName": "RFC Count by Apps",
+          "L2Name": "RFC Count by Apps",
+          "childName": "RFC Count by Apps",
+          "id": 10,
+          "dataFormat": {
+            "data": [
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Digital Application Backend",
+                "value2": "APM0103410",
+                "value3": "Enrico Bignoti",
+                "value4": "90"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "PCF TCRM",
+                "value2": "APM0103894",
+                "value3": "Darron Webb",
+                "value4": "73"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Eligibility Engine",
+                "value2": "APM0103332",
+                "value3": "Brian Forcum",
+                "value4": "72"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "T-Mobile Money",
+                "value2": "APM0103249",
+                "value3": "Christopher Hall",
+                "value4": "55"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Digital Billing",
+                "value2": "APM0102861",
+                "value3": "Meg J Knauth",
+                "value4": "41"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "USG DSG-Tibco",
+                "value2": "APM0103719",
+                "value3": "Darron Webb",
+                "value4": "37"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Rebellion Assisted",
+                "value2": "APM0103860",
+                "value3": "Rebellion Assisted",
+                "value4": "37"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "T-Mobile One Site",
+                "value2": "APM0203700",
+                "value3": "Enrico Bignoti",
+                "value4": "30"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Payment Atomic Services",
+                "value2": "APM0102751",
+                "value3": "Meg J Knauth",
+                "value4": "29"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Estate Manager",
+                "value2": "APM0103624",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "28"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Wholesale Cloud",
+                "value2": "APM0104113",
+                "value3": "Meg J Knauth",
+                "value4": "28"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Atlas - Manage Profile",
+                "value2": "APM0201728",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "26"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Enterprise User Management Services",
+                "value2": "APM0208336",
+                "value3": "Darron Webb",
+                "value4": "23"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Digital Retail Inventory",
+                "value2": "APM0102859",
+                "value3": "Craig Thomas",
+                "value4": "22"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "REMO Native Apps",
+                "value2": "APM0208677",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "22"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "TETRA Supply Chain Event Repository",
+                "value2": "APM0103013",
+                "value3": "Craig Thomas",
+                "value4": "21"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "NotificationManagement",
+                "value2": "APM0102904",
+                "value3": "Darron Webb",
+                "value4": "21"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "xECM Microservices",
+                "value2": "APM0103096",
+                "value3": "Christopher Hall",
+                "value4": "18"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Atlas - Account Overview",
+                "value2": "APM0201718",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "17"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Device Finance Services",
+                "value2": "APM0103525",
+                "value3": "Christopher Hall",
+                "value4": "16"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "RebellionWeb",
+                "value2": "APM0101826",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "16"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "TPAS Services",
+                "value2": "APM0208455",
+                "value3": "Darron Webb",
+                "value4": "15"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Atlas - Manage Payments",
+                "value2": "APM0201282",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "15"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "AMIL",
+                "value2": "APM0104186",
+                "value3": "Meg J Knauth",
+                "value4": "15"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Device Finance Servicing UI",
+                "value2": "APM0103910",
+                "value3": "Christopher Hall",
+                "value4": "11"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Edge Gateway",
+                "value2": "APM0208453",
+                "value3": "Darron Webb",
+                "value4": "11"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Magenta Selling and Serve Apps",
+                "value2": "APM0202302",
+                "value3": "Darron Webb",
+                "value4": "11"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "T-Mobile Partner API Service",
+                "value2": "APM0104117",
+                "value3": "T-Mobile Partner API Service",
+                "value4": "11"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "TFB Experience Adapter Repository",
+                "value2": "APM0103836",
+                "value3": "James Curl",
+                "value4": "9"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Credit Facility Authorization Management",
+                "value2": "APM0102802",
+                "value3": "Christopher Hall",
+                "value4": "8"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "U2 Customer Hub",
+                "value2": "APM0101696",
+                "value3": "Darron Webb",
+                "value4": "8"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Customer Welcome",
+                "value2": "APM0202531",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "8"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Digital Billing NextGen",
+                "value2": "APM0102987",
+                "value3": "Meg J Knauth",
+                "value4": "8"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Bill Pay Kiosk",
+                "value2": "APM0102948",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "7"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Global Nav",
+                "value2": "APM0103913",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "7"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "DO Innovations",
+                "value2": "APM0202312",
+                "value3": "Darron Webb",
+                "value4": "6"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Finance",
+                "value2": "APM0205489",
+                "value3": "Darron Webb",
+                "value4": "6"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "OMNI Digital",
+                "value2": "APM0104222",
+                "value3": "Darron Webb",
+                "value4": "6"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "EDS Common Library",
+                "value2": "APM0103308",
+                "value3": "EDS Common Library",
+                "value4": "6"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Digitally Assisted Sales Hub",
+                "value2": "APM0103004",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "6"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Credit Service",
+                "value2": "APM0102873",
+                "value3": "Christopher Hall",
+                "value4": "5"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Enterprise Domain Data Grid",
+                "value2": "APM0208343",
+                "value3": "Darron Webb",
+                "value4": "5"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "TFB Capability API",
+                "value2": "APM0103958",
+                "value3": "James Curl",
+                "value4": "5"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "TFB OLM UI",
+                "value2": "APM0218507",
+                "value3": "James Curl",
+                "value4": "5"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "TFB Order Processor",
+                "value2": "APM0104172",
+                "value3": "James Curl",
+                "value4": "5"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "T-Mobile For Business API Platform",
+                "value2": "APM0103375",
+                "value3": "James Curl",
+                "value4": "5"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Atlas - Utilities",
+                "value2": "APM0225142",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "5"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Data Depot Depository",
+                "value2": "APM0102875",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "5"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Bill Presentation Microservices",
+                "value2": "APM0103835",
+                "value3": "Brian Forcum",
+                "value4": "4"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "U2 Tibco_Business Works",
+                "value2": "APM0101709",
+                "value3": "Darron Webb",
+                "value4": "4"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "TFB Payment App",
+                "value2": "APM0103622",
+                "value3": "James Curl",
+                "value4": "4"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "TFB User Role Management",
+                "value2": "APM0204346",
+                "value3": "James Curl",
+                "value4": "4"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Atlas - HSI Contact",
+                "value2": "APM0222958",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "4"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "DICE",
+                "value2": "APM0103828",
+                "value3": "Ryan P Sullivan",
+                "value4": "4"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Enterprise Authentication Services",
+                "value2": "APM0208339",
+                "value3": "Darron Webb",
+                "value4": "3"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Order Processing - EBS",
+                "value2": "APM0103728",
+                "value3": "Darron Webb",
+                "value4": "3"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "TKE TCRM",
+                "value2": "APM0225097",
+                "value3": "Darron Webb",
+                "value4": "3"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "TFB Billing App",
+                "value2": "APM0214791",
+                "value3": "James Curl",
+                "value4": "3"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "TFB Self-Service Upgrade",
+                "value2": "APM0103621",
+                "value3": "James Curl",
+                "value4": "3"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Atlas - Device Dashboard",
+                "value2": "APM0201721",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "3"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "SIVR Rebellion",
+                "value2": "APM0102502",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "3"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "SIVRPostpaid",
+                "value2": "APM0101321",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "3"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "T-Mobile Electronic Service Agreements",
+                "value2": "APM0100464",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "3"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Samson_Widgets",
+                "value2": "APM0102715",
+                "value3": "Meg J Knauth",
+                "value4": "3"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Fusion Content Service",
+                "value2": "APM0204047",
+                "value3": "Craig Thomas",
+                "value4": "2"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "HR Integration Data Store",
+                "value2": "APM0103532",
+                "value3": "Craig Thomas",
+                "value4": "2"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "EventHandlers",
+                "value2": "APM0206384",
+                "value3": "Darron Webb",
+                "value4": "2"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Atlas - MCSA",
+                "value2": "APM0224862",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "2"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Atlas - Port Out Validation",
+                "value2": "APM0208216",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "2"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Cloud Cash Drawer",
+                "value2": "APM0103550",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "2"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "SIVRPrepaid",
+                "value2": "APM0101323",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "2"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Payment Adjudication & Reconcilitation",
+                "value2": "APM0205001",
+                "value3": "Meg J Knauth",
+                "value4": "2"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Dependency Management Platform",
+                "value2": "APM0103697",
+                "value3": "Shyam Prakash",
+                "value4": "2"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Products Services API",
+                "value2": "APM0102991",
+                "value3": "Brian Forcum",
+                "value4": "1"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Collection Decision Engine System",
+                "value2": "APM0100063",
+                "value3": "Christopher Hall",
+                "value4": "1"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Entitlement Policy Manager",
+                "value2": "APM0201203",
+                "value3": "Darron Webb",
+                "value4": "1"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "SupplyChain",
+                "value2": "APM0205493",
+                "value3": "Darron Webb",
+                "value4": "1"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "TFB Self-Service Account Management",
+                "value2": "APM0103806",
+                "value3": "James Curl",
+                "value4": "1"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Atlas - API Legacy Abstraction",
+                "value2": "APM0201717",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "1"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "Atlas - Products and Services",
+                "value2": "APM0223338",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "1"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "QuikView XP",
+                "value2": "APM0101057",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "1"
+              },
+              {
+                "header1": "Application Name",
+                "header2": "Application ID",
+                "header3": "VP",
+                "header4": "RFC Count",
+                "value1": "SELXT API",
+                "value2": "APM0104220",
+                "value3": "Matthew (Newport) Davis",
+                "value4": "1"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

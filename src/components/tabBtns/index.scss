@@ -1,0 +1,53 @@
+.tabContainer {
+  display: flex;
+  justify-content: space-between;
+
+  .themeVector {
+    width: 1.3em;
+    height: 1.3em;
+  }
+
+  .tabParent {
+    display: flex;
+    border-radius: 0.3em;
+    padding: 0.3em;
+    text-transform: uppercase;
+    position: relative;
+
+    .selectedWrapper {
+      position: absolute;
+      width: 5.4rem;
+      border-radius: 0.2em;
+      height: 1.4rem;
+      background-color: #ea3537;
+      transition: 0.3s ease-in-out;
+      transform: translateX(0);
+    }
+
+    .widgetSelection {
+      transform: translateX(5.6rem);
+    }
+
+    .tabNames {
+      padding: 0.3em 2em;
+      font-size: 11px;
+      cursor: pointer;
+      border: none;
+      text-transform: uppercase;
+      background-color: transparent;
+      font-family: 'Saira Medium';
+    }
+    .tabNames:hover {
+      color: #ea3537;
+    }
+
+    .activeTab {
+      border-radius: 0.3em;
+      color: #ffffff;
+      z-index: 1;
+    }
+    .activeTab:hover {
+      color: #ffffff;
+    }
+  }
+}

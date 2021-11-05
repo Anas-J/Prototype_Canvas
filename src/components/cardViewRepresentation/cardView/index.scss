@@ -1,0 +1,51 @@
+@import '../../../styleGuide/typoGraphy/index.scss';
+
+.row {
+  display: grid;
+  padding: 0.9rem;
+  margin: 0.3rem;
+  grid-template-columns: 20% 80%;
+  background: #f1f4fa;
+}
+
+.rowHeader {
+  font-family: 'Saira Medium';
+  font-size: map-get($font-size-list, H2);
+  font-weight: 800;
+  color: map-get($font-color-family, color1);
+}
+
+.rowValue {
+  font-family: map-get($font-family, family-Saira);
+  font-size: map-get($font-size-list, H2);
+  font-weight: map-get($font-weight-family, regularWeight);
+  color: map-get($font-color-family, color1);
+}
+
+.multiValueStructure {
+  display: flex;
+  margin: 0.3rem;
+  box-sizing: border-box;
+  background: #f1f4fa;
+}
+
+.multi-value-row {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  padding: 0.9rem;
+}
+
+.inlineStart {
+  display: inline-grid;
+  width: 45%;
+}
+
+.inlineEnd {
+  display: inline-grid;
+  width: 45.5%;
+}
+
+.cardViewContainer .row:last-child {
+  margin-bottom: 1rem;
+}

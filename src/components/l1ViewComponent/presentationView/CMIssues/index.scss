@@ -1,0 +1,71 @@
+@import '../../../../styleGuide/typoGraphy/index.scss';
+
+.issuesWrapper {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.L1Wrapper.issues {
+  display: grid;
+  grid-template-columns: 2.5rem 2.5rem;
+  grid-gap: 0.5em;
+}
+
+.circularContainer {
+  border-radius: 50%;
+  background: rgba(244, 81, 108, 0.2);
+  height: 2.5rem;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.circularContainer:nth-child(2) {
+  background: #fbe3d3;
+
+  .circularValue {
+    color: #ff7224;
+  }
+}
+
+.circularContainer:nth-child(3) {
+  background: #fdedda;
+
+  .circularValue {
+    color: #f9a345;
+  }
+}
+
+.circularContainer:nth-child(4) {
+  background: #dedfe8;
+}
+
+.circularLabel {
+  font-family: map-get($font-family, family-Inter);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 8px;
+  text-transform: uppercase;
+  color: map-get($font-color-family, color1);
+  position: absolute;
+  left: 50%;
+  top: 1em;
+  transform: translateX(-50%);
+}
+
+.circularValue {
+  font-family: map-get($font-family, family-Inter);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: map-get($font-color-family, color1);
+  position: absolute;
+  left: 50%;
+  bottom: 1em;
+  transform: translateX(-50%);
+}

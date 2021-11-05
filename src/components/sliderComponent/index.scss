@@ -1,0 +1,144 @@
+@import '../../styleGuide/typoGraphy/index.scss';
+
+.sliderOuterWrap {
+  width: 100%;
+  height: 26vh;
+  position: absolute;
+  bottom: 0;
+}
+
+.sliderWrapper {
+  width: 100%;
+  height: 100%;
+
+  //   top: -30%;
+
+  .slick-slide {
+    // margin: 0rem 0.3rem;
+    width: 26vh;
+  }
+
+  .slick-slide > div {
+    height: 100%;
+  }
+}
+
+.slick-prev {
+  left: 2%;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 2%;
+  z-index: 1;
+}
+
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  top: calc(8vh + 2rem) !important;
+}
+
+.slick-slider {
+  height: 100%;
+}
+
+.slick-list {
+  height: 100%;
+  overflow: hidden;
+}
+
+.slick-track {
+  height: 100%;
+  padding: 2rem 0 1rem;
+}
+
+.carouselContainer .tileContainer {
+  width: 25vh;
+  height: 16vh;
+  border-radius: 0.3em;
+  justify-content: space-between;
+}
+
+.carouselContainer.activeCard > .tileContainer {
+  border-bottom: 4px solid #ea3537;
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  padding: 0.5em;
+}
+
+.carouselContainer.inactiveCard.hoveredActive > .tileContainer {
+  border-bottom: 4px solid #ea3537;
+  position: relative;
+}
+
+.carouselContainer.inactiveCard.hoveredActive > .tileContainer .animatedBorder {
+  display: block;
+}
+
+.carouselContainer.inactiveCard.hoveredActive > .tileContainer .animatedBorder:hover,
+.carouselContainer.inactiveCard.hoveredActive > .tileContainer .animatedContent:hover {
+  transform: scale(1);
+}
+
+.carouselContainer.inactiveCard .tileContainer .tagText {
+  font-size: 20px;
+}
+
+.inactiveCard :hover {
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -o-transform: scale(1.3);
+}
+
+.carouselContainer.inactiveCard > .tileContainer > .L1Wrapper {
+  pointer-events: none;
+}
+
+.carouselContainer.inactiveCard > .tileContainer > .headerL1View {
+  pointer-events: none;
+}
+.carouselContainer.inactiveCard > .tileContainer > .tagDescWrap > .tagDescription {
+  pointer-events: none;
+}
+
+.carouselContainer.inactiveCard > .tileContainer > .tagDescWrap {
+  pointer-events: none;
+}
+
+.label-wrapper.description {
+  position: absolute;
+  top: 3%;
+  // height: 9%;
+  width: 30vh;
+  transform: scale(1.3);
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: map-get($font-size-list, H6);
+  font-family: map-get($font-family, family-Saira);
+}
+
+.carousel-arrow-state {
+  img:last-child {
+    display: none;
+  }
+}
+
+.carousel-arrow-state:hover {
+  img:last-child {
+    display: block;
+  }
+  img:first-child {
+    display: none;
+  }
+  // .leftArrowHover {
+  //   transform: translate(-20%, -50%) !important;
+  // }
+  // .rightArrowHover {
+  //   transform: translate(20%, -50%) !important;
+  // }
+}

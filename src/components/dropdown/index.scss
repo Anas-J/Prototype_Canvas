@@ -1,0 +1,83 @@
+.dropdown {
+  box-sizing: border-box;
+  position: relative;
+  width: 11vw;
+  background: #ffffff;
+  .toggleButton {
+    background: #ffffff;
+    cursor: pointer;
+    color: #383874;
+    font-family: 'Saira';
+    padding: 0.5em;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: none;
+    display: flex;
+    border: none;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+    .boldText {
+      font-weight: 600;
+      margin-left: 0.5em;
+    }
+    .invertIcon {
+      transform: rotateX(180deg);
+    }
+    .filterIcon {
+      position: absolute;
+      right: 0.5em;
+      top: 0.8em;
+      height: 1em;
+      width: 1em;
+      transition: 0.3s ease-in-out;
+    }
+  }
+  .filterDropdown {
+    position: absolute;
+    right: 0em;
+    top: 2.5rem;
+    background: #ffffff;
+    width: 15vw;
+    font-family: 'Saira';
+    height: 30vh;
+    z-index: 9;
+    overflow: auto;
+    box-shadow: 3px 5px 18px -3px rgb(0 0 0 / 75%);
+    transition: all 0.3s ease-in-out;
+    li.content {
+      display: block;
+      cursor: pointer;
+      padding: 1em 2em;
+      transition: 0.3s ease-in-out;
+      font-weight: 600;
+      font-size: 14px;
+      position: relative;
+      .tickImg {
+        position: absolute;
+        right: 1em;
+        top: 1.3em;
+        width: 1em;
+        height: 1em;
+        display: none;
+      }
+      .tickImg.visible {
+        display: block;
+      }
+    }
+    .activeData {
+      background: #f5f6fa;
+      color: #ea3537;
+    }
+    li.content:hover {
+      background: #f5f6fa;
+    }
+  }
+  .closeDrop {
+    height: 0;
+  }
+}
+
+.filterDropdown::-webkit-scrollbar {
+  display: none;
+}
