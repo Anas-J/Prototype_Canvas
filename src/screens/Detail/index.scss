@@ -1,0 +1,148 @@
+@import '../../styleGuide/typoGraphy/index.scss';
+
+.detailContainer {
+  height: calc(100vh - 3rem);
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  box-sizing: border-box;
+  animation: fadeIn 0.5s ease-in;
+  opacity: 1;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  }
+
+  .detailContent {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem 3rem;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+
+    .backLogo {
+      width: 2em;
+      height: 2em;
+      cursor: pointer;
+      position: absolute;
+      top: 2rem;
+      position: sticky;
+    }
+
+    .detailReport {
+      width: 70%;
+      margin: 0 auto;
+      .cardWrapperL2::-webkit-scrollbar,
+      .tableWrapperL2::-webkit-scrollbar,
+      .tableForGraphDetail::-webkit-scrollbar {
+        display: none;
+      }
+      .cardWrapperL2 {
+        height: 70vh;
+        overflow: auto;
+      }
+      .tableWrapperL2 {
+        // height: 70vh;
+        // overflow: auto;
+      }
+      .graphWrapperDetail {
+        height: 39vh;
+        margin-bottom: 2rem;
+      }
+      .tableForGraphDetail {
+        // height: 45vh;
+        // overflow: auto;
+      }
+
+      .detailHeader {
+        text-align: center;
+        font-family: 'Saira Medium';
+        font-weight: 600;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-size: 24px;
+        margin-bottom: 2em;
+      }
+
+      .tableWrapper {
+        height: 50vh;
+        overflow: auto;
+      }
+
+      .tableWrapper::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+
+.light {
+  background-image: url('../../assets/images/bg.png');
+}
+
+.dark {
+  background-image: linear-gradient(180deg, #435088, #1e254a);
+}
+
+.detailContainer.dark .backLogo {
+  filter: invert(99%) sepia(29%) saturate(586%) hue-rotate(192deg) brightness(96%) contrast(95%);
+}
+
+.dark .detailContent .detailReport .tableForGraphDetail table tr:first-child {
+  background-color: map-get($header-background-color, backgroundColorDark);
+}
+
+.light .detailContent .detailReport .tableForGraphDetail table tr:first-child {
+  background-color: map-get($header-background-color, backgroundColorLight);
+  td:last-child {
+    background-color: map-get($header-background-color, backgroundColorLight);
+  }
+}
+
+.dark .detailContent .detailReport .tableWrapperL2 .tableBodyL2 table tr:first-child {
+  background-color: map-get($header-background-color, backgroundColorDark);
+}
+
+.light .detailContent .detailReport .tableWrapperL2 .tableBodyL2 table tr:first-child {
+  background-color: map-get($header-background-color, backgroundColorLight);
+  td:last-child {
+    background-color: map-get($header-background-color, backgroundColorLight);
+  }
+}
+
+.detailContainer.dark {
+  .mrgraph-bar-value {
+    fill: #c6c6d4;
+    font-size: 12px;
+    font-weight: 800;
+  }
+  .cm-multiple-columns .value-group .mrgraph-multiple-bar-value {
+    fill: #c6c6d4;
+    font-weight: 800;
+  }
+  .mrgraph-value-group-column {
+    fill: #c6c6d4;
+  }
+}
+
+.detailContainer.light {
+  .mrgraph-bar-value {
+    fill: #383874;
+    font-size: 12px;
+    font-weight: 800;
+  }
+  .cm-multiple-columns .value-group .mrgraph-multiple-bar-value {
+    fill: #383874;
+    font-weight: 800;
+  }
+  .mrgraph-value-group-column {
+    fill: #383874;
+  }
+}

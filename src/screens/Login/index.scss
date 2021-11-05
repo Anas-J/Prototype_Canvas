@@ -1,0 +1,19 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100% - 3rem);
+
+  .loginBtn {
+    text-transform: uppercase;
+    background: #ea3737;
+    border: none;
+    color: #ffffff;
+    width: 5em;
+    padding: 1em;
+    border-radius: 0.3em;
+    cursor: pointer;
+  }
+}

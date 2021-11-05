@@ -1,0 +1,145 @@
+.widgetContainer {
+  height: calc(100vh - 3rem);
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  box-sizing: border-box;
+  animation: fadeIn 0.5s ease-in;
+  opacity: 1;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  }
+
+  .widgetContent {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem 3rem;
+    height: 100%;
+    overflow: auto;
+
+    .widgetsWrapper {
+      display: grid;
+      grid-template-columns: 17vw 17vw 17vw 17vw 17vw;
+      grid-gap: 2em;
+      justify-content: space-between;
+
+      .tileContainer {
+        border-radius: 0.3em;
+        transition: all 0.3s ease-in-out;
+        width: 17vw;
+        height: 12vw;
+        padding: 1em;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        .L1Wrapper img {
+          width: 4rem;
+          height: 4rem;
+        }
+
+        .textPosition img {
+          width: 1em;
+          height: 1em;
+        }
+      }
+    }
+
+    .tagsWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 1em 0;
+      margin-top: 0;
+      box-sizing: border-box;
+
+      .tagsContainer {
+        color: #383874;
+        margin: 0.7em 0.85em 0.7em 0;
+        cursor: pointer;
+
+        .tagsData {
+          padding: 0.5em 1em;
+          background: #69678c;
+          color: #fff;
+          font-size: 12px;
+          font-family: 'Saira Medium';
+          box-sizing: border-box;
+          border-radius: 3em;
+        }
+
+        .tagsData:hover {
+          background: #5c5c92;
+        }
+
+        .tagsData.activeReport:hover {
+          background: #ea3537;
+        }
+
+        .activeReport {
+          background-color: #ea3537;
+        }
+      }
+    }
+
+    .searchWidget {
+      display: flex;
+      background: #fff;
+      border-radius: 2em;
+      align-items: center;
+      padding: 0.3em 1em;
+      width: 50%;
+
+      .searchIcon {
+        width: 1em;
+        height: 1em;
+        margin-right: 0.5em;
+      }
+
+      .searchBox {
+        outline: none;
+        border: none;
+        font-family: 'Saira';
+        width: 100%;
+        background: transparent;
+      }
+    }
+  }
+
+  .widgetContent::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.light {
+  background-image: url('../../assets/images/bg.png');
+}
+
+.dark {
+  background-image: linear-gradient(180deg, #435088, #1e254a);
+}
+
+.page-enter {
+  opacity: 0;
+  transform: scale(1.3);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 700ms, transform 700ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}

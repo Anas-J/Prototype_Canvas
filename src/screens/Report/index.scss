@@ -1,0 +1,217 @@
+.reportContainer {
+  height: calc(100vh - 3rem);
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  justify-content: flex-end;
+  animation: fadeIn 0.5s ease-in;
+  opacity: 1;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  }
+
+  .reportContents {
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reportContentFullViewPage {
+    width: 100%;
+  }
+
+  .reportContentOnNavOpenViewPage {
+    width: 75%;
+  }
+}
+
+.toggleButtonContainer {
+  width: 4rem;
+  height: 4rem;
+  top: calc(50% - 9rem);
+  left: -2.2rem;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 1;
+  background-color: #c8d2e7;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .nav-img {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    right: 0.6em;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav-toggle-img {
+    transform: rotateY(0deg);
+  }
+
+  .rotate-nav-toggle-img {
+    transform: rotateY(180deg);
+  }
+}
+
+.l2ViewComponent {
+  width: 100%;
+  height: 85%;
+
+  table tr td,
+  table tr th {
+    padding: 0.5rem;
+  }
+
+  .l2ViewSection {
+    height: 63vh;
+    margin: auto;
+
+    .representationViews {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.representationViews {
+  .cardWrapperL2 {
+    overflow: hidden;
+    border-radius: 5px;
+    .headerText {
+      padding-top: 0em;
+      margin: 0em;
+      margin-bottom: 1em;
+    }
+    .cardBody {
+      height: calc(100% - 4rem);
+      article {
+        height: 100%;
+        width: 100%;
+      }
+      .cardViewParagraphTexts {
+        margin: 0em;
+        height: 100%;
+        box-sizing: border-box;
+        transition: opacity 0.3s ease-in-out;
+        animation: revealCard 0.7s ease-in;
+
+        .cardViewContainer {
+          height: 100%;
+          overflow-y: scroll;
+        }
+      }
+
+      @keyframes revealCard {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.cardViewContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.representationViews {
+  width: 100%;
+  height: 100%;
+}
+
+.sliderComponent {
+  // width: 100%; //temporary comment
+
+  height: 15%;
+  position: relative;
+}
+
+.l2ViewArrow {
+  align-self: center;
+  position: absolute;
+  top: 50%;
+}
+
+.left-side {
+  left: -4%;
+}
+
+.left-side:hover {
+  .arrowImg {
+    transform: translateX(-10px);
+  }
+}
+
+.right-side:hover {
+  .arrowImg {
+    transform: translateX(10px);
+  }
+}
+
+.right-side {
+  right: -4%;
+}
+
+.light {
+  background-image: url('../../assets/images/bg.png');
+}
+
+.dark {
+  background-image: linear-gradient(180deg, #435088, #1e254a);
+}
+
+.arrowImg {
+  transition: 0.3s ease-in;
+  width: 2rem !important;
+  height: 2rem !important;
+  filter: invert(56%) sepia(31%) saturate(302%) hue-rotate(204deg) brightness(100%) contrast(100%);
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.l2ViewArrow:hover {
+  .arrowImg {
+    opacity: 1;
+  }
+}
+
+.display-block {
+  opacity: 1;
+}
+
+.display-none {
+  opacity: 0;
+}
+
+.l2ViewSection {
+  width: 50vw;
+  height: 63vh;
+  margin: auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.widthFullView {
+  width: 85vw;
+}
+
+.widthCollapseView {
+  width: 65vw;
+  height: 55vh;
+  margin: auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
